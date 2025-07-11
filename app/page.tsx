@@ -1480,37 +1480,7 @@ export default function Portfolio() {
         )}
       </AnimatePresence>
 
-      {/* Floating Resume Button */}
-      <motion.div
-        className="fixed bottom-8 right-8 z-40"
-        whileHover={{ scale: 1.1, y: -5 }}
-        whileTap={{ scale: 0.9 }}
-        animate={{
-          y: [0, -10, 0],
-          rotate: [0, 5, -5, 0],
-        }}
-        transition={{
-          y: { duration: 3, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
-          rotate: { duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
-        }}
-      >
-        <Button
-          onClick={() => setShowResume(true)}
-          className="rounded-full p-4 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-600 border-0 shadow-2xl relative overflow-hidden group"
-        >
-          <motion.div
-            className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100"
-            transition={{ duration: 0.3 }}
-          />
-          <motion.div
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-            className="relative z-10"
-          >
-            <Download className="h-6 w-6 text-white" />
-          </motion.div>
-        </Button>
-      </motion.div>
+      {/* Floating Resume Button removed as per user request */}
     </div>
   )
 }

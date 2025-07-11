@@ -55,10 +55,9 @@ const personalData = {
     "AI Enthusiast",
     "Full Stack Developer",
     "Research Scholar",
-    "CORE Committee President",
   ],
   about:
-    "Third-year B.Tech CSE student with leadership experience as CORE Committee President and UG research in network security. Completed AI and data science internships, developing Python-based solutions with pandas and scikit-learn. Seeking an MNC opportunity to apply strong algorithms background, vulnerability assessment skills, and collaborative problem-solving to drive innovation.",
+    "Final-year B.Tech CSE student with leadership experience and UG research scholar in CRTD. Completed AI and data science internships, developing Python-based solutions with pandas and scikit-learn. Seeking an MNC opportunity to apply strong algorithms background, vulnerability assessment skills, and collaborative problem-solving to drive innovation.",
 
   education: [
     {

@@ -735,7 +735,7 @@ export default function Portfolio() {
       <section id="education" ref={sectionRefs.education} className="py-20 relative">
         <div className="container mx-auto px-4 relative z-10">
           <motion.h2
-            className="text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+            className="text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-600 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -747,7 +747,7 @@ export default function Portfolio() {
           <div className="max-w-4xl mx-auto relative">
             {/* Timeline line */}
             <motion.div
-              className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-blue-400 via-purple-500 to-pink-500 rounded-full"
+              className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-blue-500 via-purple-600 to-pink-600 rounded-full"
               initial={{ height: 0 }}
               whileInView={{ height: "100%" }}
               transition={{ duration: 2, ease: "easeInOut" }}
@@ -773,27 +773,27 @@ export default function Portfolio() {
                 <div className={`flex items-center ${index % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}>
                   <div className="flex-1">
                     <motion.div whileHover={{ scale: 1.02, y: -5 }} className="group">
-                      <Card className="bg-gradient-to-br from-slate-800/50 via-purple-800/30 to-indigo-800/50 backdrop-blur-sm border border-white/10 shadow-2xl hover:shadow-blue-500/25 transition-all duration-300">
+                      <Card className="bg-gradient-to-br from-blue-900/60 via-purple-900/40 to-pink-900/60 backdrop-blur-sm border border-blue-400/20 shadow-2xl hover:shadow-blue-500/40 transition-all duration-300">
                         <CardHeader>
-                          <CardTitle className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-xl font-semibold">
+                          <CardTitle className="bg-gradient-to-r from-blue-500 via-purple-600 to-pink-600 bg-clip-text text-transparent text-xl font-semibold">
                             {edu.degree}
                           </CardTitle>
-                          <CardDescription className="bg-gradient-to-r from-purple-400 via-pink-500 to-rose-500 bg-clip-text text-transparent font-medium">
+                          <CardDescription className="bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 bg-clip-text text-transparent font-medium">
                             {edu.institution}
                           </CardDescription>
-                          <CardDescription className="text-slate-400 text-sm">{edu.location}</CardDescription>
+                          <CardDescription className="text-purple-100 text-sm font-medium">{edu.location}</CardDescription>
                         </CardHeader>
                         <CardContent>
-                          <p className="text-slate-300 mb-3 leading-relaxed">{edu.description}</p>
+                          <p className="text-blue-50 mb-3 leading-relaxed font-medium">{edu.description}</p>
                           <div className="flex justify-between items-center">
                             <motion.p
-                              className="text-lg bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent font-bold"
+                              className="text-xl bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent font-bold drop-shadow-sm"
                               whileHover={{ scale: 1.05 }}
                             >
                               {edu.grade}
                             </motion.p>
                             <motion.p
-                              className="text-sm bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent font-medium"
+                              className="text-base bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent font-semibold drop-shadow-sm"
                               whileHover={{ scale: 1.05 }}
                             >
                               {edu.year}
@@ -806,7 +806,7 @@ export default function Portfolio() {
 
                   {/* Timeline node */}
                   <motion.div
-                    className="w-6 h-6 bg-gradient-to-r from-blue-400 to-purple-600 rounded-full relative z-10 shadow-lg"
+                    className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full relative z-10 shadow-lg"
                     whileHover={{ scale: 1.5 }}
                     animate={{
                       boxShadow: ["0 0 0 0 rgba(59, 130, 246, 0.4)", "0 0 0 15px rgba(59, 130, 246, 0)"],
@@ -860,7 +860,7 @@ export default function Portfolio() {
                 whileHover={{ y: -8, scale: 1.02 }}
                 className="group"
               >
-                <Card className="bg-gradient-to-br from-slate-800/50 via-purple-800/30 to-indigo-800/50 backdrop-blur-sm border border-white/10 shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 h-full">
+                <Card className="bg-gradient-to-br from-purple-900/60 via-pink-900/40 to-blue-900/60 backdrop-blur-sm border border-purple-400/20 shadow-2xl hover:shadow-purple-500/40 transition-all duration-300 h-full">
                   <CardHeader>
                     <CardTitle className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-xl font-semibold group-hover:scale-105 transition-transform duration-300">
                       {exp.position}
@@ -868,12 +868,12 @@ export default function Portfolio() {
                     <CardDescription className="bg-gradient-to-r from-purple-400 via-pink-500 to-rose-500 bg-clip-text text-transparent font-medium">
                       {exp.company}
                     </CardDescription>
-                    <CardDescription className="text-slate-400 text-sm">{exp.location}</CardDescription>
+                    <CardDescription className="text-purple-100 text-sm font-medium">{exp.location}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-slate-300 mb-4 leading-relaxed">{exp.description}</p>
+                    <p className="text-blue-50 mb-4 leading-relaxed font-medium">{exp.description}</p>
                     <motion.p
-                      className="text-sm bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent font-medium"
+                      className="text-base bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent font-semibold drop-shadow-sm"
                       whileHover={{ scale: 1.02 }}
                     >
                       {exp.duration}
@@ -914,12 +914,12 @@ export default function Portfolio() {
                 whileHover={{ y: -10, scale: 1.03 }}
                 className="group"
               >
-                <Card className="bg-gradient-to-br from-slate-800/50 via-purple-800/30 to-indigo-800/50 backdrop-blur-sm border border-white/10 shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 h-full">
+                <Card className="bg-gradient-to-br from-pink-900/60 via-blue-900/40 to-purple-900/60 backdrop-blur-sm border border-pink-400/20 shadow-2xl hover:shadow-pink-500/40 transition-all duration-300 h-full">
                   <CardHeader>
                     <CardTitle className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-xl font-semibold group-hover:scale-105 transition-transform duration-300">
                       {project.name}
                     </CardTitle>
-                    <CardDescription className="text-slate-300 leading-relaxed">{project.description}</CardDescription>
+                    <CardDescription className="text-blue-50 leading-relaxed font-medium">{project.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-wrap gap-2 mb-6">
@@ -1020,14 +1020,14 @@ export default function Portfolio() {
                       }}
                       className="group"
                     >
-                      <Card className="bg-gradient-to-br from-slate-800/50 via-purple-800/30 to-indigo-800/50 backdrop-blur-sm border border-white/10 shadow-xl hover:shadow-blue-500/25 transition-all duration-300 p-6 text-center">
+                      <Card className="bg-gradient-to-br from-blue-900/60 via-purple-900/40 to-pink-900/60 backdrop-blur-sm border border-blue-400/20 shadow-xl hover:shadow-blue-500/40 transition-all duration-300 p-6 text-center">
                         <motion.div
                           animate={{ rotate: [0, 10, -10, 0] }}
                           transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
                         >
                           <Icon className="h-12 w-12 mx-auto mb-4 text-blue-400 group-hover:text-purple-400 transition-colors duration-300" />
                         </motion.div>
-                        <h4 className="font-semibold text-white mb-2">{skill.name}</h4>
+                        <h4 className="font-semibold text-blue-50 mb-2">{skill.name}</h4>
                         <div className="w-full bg-slate-700 rounded-full h-2 mb-2">
                           <motion.div
                             className="bg-gradient-to-r from-blue-400 to-purple-600 h-2 rounded-full"
@@ -1036,7 +1036,7 @@ export default function Portfolio() {
                             transition={{ duration: 1, delay: index * 0.1 }}
                           />
                         </div>
-                        <span className="text-sm text-slate-400">{skill.level}%</span>
+                        <span className="text-sm text-purple-100 font-medium">{skill.level}%</span>
                       </Card>
                     </motion.div>
                   )
@@ -1080,7 +1080,7 @@ export default function Portfolio() {
                       }}
                       className="group"
                     >
-                      <Card className="bg-gradient-to-br from-slate-800/50 via-purple-800/30 to-indigo-800/50 backdrop-blur-sm border border-white/10 shadow-xl hover:shadow-purple-500/25 transition-all duration-300 p-6 text-center">
+                      <Card className="bg-gradient-to-br from-purple-900/60 via-pink-900/40 to-blue-900/60 backdrop-blur-sm border border-purple-400/20 shadow-xl hover:shadow-purple-500/40 transition-all duration-300 p-6 text-center">
                         <motion.div
                           animate={{
                             scale: [1, 1.1, 1],
@@ -1090,7 +1090,7 @@ export default function Portfolio() {
                         >
                           <Icon className="h-12 w-12 mx-auto mb-4 text-purple-400 group-hover:text-pink-400 transition-colors duration-300" />
                         </motion.div>
-                        <h4 className="font-semibold text-white mb-2">{skill.name}</h4>
+                        <h4 className="font-semibold text-purple-50 mb-2">{skill.name}</h4>
                         <div className="w-full bg-slate-700 rounded-full h-2 mb-2">
                           <motion.div
                             className="bg-gradient-to-r from-purple-400 to-pink-600 h-2 rounded-full"
@@ -1099,7 +1099,7 @@ export default function Portfolio() {
                             transition={{ duration: 1, delay: index * 0.1 }}
                           />
                         </div>
-                        <span className="text-sm text-slate-400">{skill.level}%</span>
+                        <span className="text-sm text-pink-100 font-medium">{skill.level}%</span>
                       </Card>
                     </motion.div>
                   )
@@ -1138,7 +1138,7 @@ export default function Portfolio() {
                 whileHover={{ y: -8, scale: 1.03, rotateY: 5 }}
                 className="group"
               >
-                <Card className="bg-gradient-to-br from-slate-800/50 via-purple-800/30 to-indigo-800/50 backdrop-blur-sm border border-white/10 shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300">
+                <Card className="bg-gradient-to-br from-yellow-900/60 via-orange-900/40 to-red-900/60 backdrop-blur-sm border border-yellow-400/20 shadow-2xl hover:shadow-yellow-500/40 transition-all duration-300">
                   <CardContent className="p-6 text-center">
                     <motion.div
                       className="mb-4"
@@ -1199,7 +1199,7 @@ export default function Portfolio() {
                 }}
                 className="group"
               >
-                <Card className="bg-gradient-to-br from-slate-800/50 via-purple-800/30 to-indigo-800/50 backdrop-blur-sm border border-white/10 shadow-2xl hover:shadow-green-500/25 transition-all duration-300">
+                <Card className="bg-gradient-to-br from-green-900/60 via-emerald-900/40 to-teal-900/60 backdrop-blur-sm border border-green-400/20 shadow-2xl hover:shadow-green-500/40 transition-all duration-300">
                   <CardHeader>
                     <div className="flex items-center gap-4">
                       <motion.div
@@ -1222,16 +1222,16 @@ export default function Portfolio() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-slate-300 mb-4 leading-relaxed">{cert.description}</p>
+                    <p className="text-blue-50 mb-4 leading-relaxed font-medium">{cert.description}</p>
                     <div className="flex justify-between items-center">
                       <motion.p
-                        className="text-sm bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent font-medium"
+                        className="text-base bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent font-semibold drop-shadow-sm"
                         whileHover={{ scale: 1.05 }}
                       >
                         Duration: {cert.duration}
                       </motion.p>
                       <motion.p
-                        className="text-sm bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent font-medium"
+                        className="text-base bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent font-semibold drop-shadow-sm"
                         whileHover={{ scale: 1.05 }}
                       >
                         {cert.year}
@@ -1287,7 +1287,7 @@ export default function Portfolio() {
                   </motion.div>
                   <a
                     href={`mailto:${personalData.contact.email}`}
-                    className="text-lg text-white group-hover:text-slate-300 transition-colors hover:underline"
+                    className="text-lg text-blue-50 group-hover:text-blue-100 transition-colors hover:underline font-medium"
                   >
                     {personalData.contact.email}
                   </a>
@@ -1306,7 +1306,7 @@ export default function Portfolio() {
                   </motion.div>
                   <a
                     href={`tel:${personalData.contact.phone}`}
-                    className="text-lg text-white group-hover:text-slate-300 transition-colors hover:underline"
+                    className="text-lg text-purple-50 group-hover:text-purple-100 transition-colors hover:underline font-medium"
                   >
                     {personalData.contact.phone}
                   </a>
@@ -1323,7 +1323,7 @@ export default function Portfolio() {
                   >
                     <MapPin className="h-5 w-5 text-white" />
                   </motion.div>
-                  <span className="text-lg text-white group-hover:text-slate-300 transition-colors">
+                  <span className="text-lg text-cyan-50 group-hover:text-cyan-100 transition-colors font-medium">
                     {personalData.contact.location}
                   </span>
                 </motion.div>
@@ -1368,7 +1368,7 @@ export default function Portfolio() {
                     name="name"
                     placeholder="Your Name"
                     required
-                    className="bg-gradient-to-r from-slate-800/50 via-purple-800/30 to-indigo-800/50 backdrop-blur-sm border border-white/20 text-white placeholder:text-slate-400 text-lg p-4 rounded-xl shadow-lg focus:border-blue-400 transition-all duration-300"
+                    className="bg-gradient-to-r from-slate-800/50 via-purple-800/30 to-indigo-800/50 backdrop-blur-sm border border-white/20 text-white placeholder:text-blue-200 text-lg p-4 rounded-xl shadow-lg focus:border-blue-400 transition-all duration-300"
                   />
                 </motion.div>
 
@@ -1382,7 +1382,7 @@ export default function Portfolio() {
                     type="email"
                     placeholder="Your Email"
                     required
-                    className="bg-gradient-to-r from-slate-800/50 via-purple-800/30 to-indigo-800/50 backdrop-blur-sm border border-white/20 text-white placeholder:text-slate-400 text-lg p-4 rounded-xl shadow-lg focus:border-blue-400 transition-all duration-300"
+                    className="bg-gradient-to-r from-slate-800/50 via-purple-800/30 to-indigo-800/50 backdrop-blur-sm border border-white/20 text-white placeholder:text-purple-200 text-lg p-4 rounded-xl shadow-lg focus:border-blue-400 transition-all duration-300"
                   />
                 </motion.div>
 
@@ -1396,7 +1396,7 @@ export default function Portfolio() {
                     placeholder="Your Message"
                     required
                     rows={5}
-                    className="bg-gradient-to-r from-slate-800/50 via-purple-800/30 to-indigo-800/50 backdrop-blur-sm border border-white/20 text-white placeholder:text-slate-400 text-lg p-4 rounded-xl shadow-lg focus:border-blue-400 transition-all duration-300 resize-none"
+                    className="bg-gradient-to-r from-slate-800/50 via-purple-800/30 to-indigo-800/50 backdrop-blur-sm border border-white/20 text-white placeholder:text-pink-200 text-lg p-4 rounded-xl shadow-lg focus:border-blue-400 transition-all duration-300 resize-none"
                   />
                 </motion.div>
 
